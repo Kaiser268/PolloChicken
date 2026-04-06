@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>Login CHICKEN</title>
+
+<style>
+
+/* FONDO */
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, black, red);
+    text-align: center;
+    color: white;
+}
+
+/* TÍTULO ANIMADO */
+h2 {
+    animation: zoom 2s infinite alternate;
+}
+
+@keyframes zoom {
+    from { transform: scale(1); color: white; }
+    to { transform: scale(1.2); color: red; }
+}
+
+/* FORMULARIO */
+form {
+    background: white;
+    color: black;
+    width: 280px;
+    margin: auto;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+/* FIRST-CHILD */
+form label:first-child {
+    color: red;
+    font-weight: bold;
+}
+
+/* LAST-CHILD */
+form input:last-child {
+    background: black;
+    color: white;
+}
+
+/* FIRST-OF-TYPE */
+input:first-of-type {
+    border: 2px solid red;
+}
+
+/* LAST-OF-TYPE */
+input:last-of-type {
+    border: 2px solid black;
+}
+
+/* ONLY-OF-TYPE */
+h2:only-of-type {
+    letter-spacing: 2px;
+}
+
+/* ONLY-CHILD (ejemplo si se usa solo) */
+form br:only-child {
+    display: none;
+}
+
+/* INPUTS */
+input {
+    width: 90%;
+    padding: 8px;
+    margin: 5px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    transition: 0.3s;
+}
+
+/* HOVER */
+input:hover {
+    border: 2px solid red;
+}
+
+/* FOCUS */
+input:focus {
+    background: #ffe5e5;
+    outline: none;
+}
+
+/* ACTIVE */
+input:active {
+    transform: scale(0.95);
+}
+
+/* DISABLED */
+input:disabled {
+    background: gray;
+}
+
+/* CHECKED (por si agregas checkbox luego) */
+input:checked {
+    outline: 2px solid red;
+}
+
+/* NOT */
+input:not([type="submit"]) {
+    background: #fafafa;
+}
+
+/* BOTÓN */
+input[type="submit"] {
+    background: red;
+    color: white;
+    cursor: pointer;
+}
+
+/* HOVER BOTÓN */
+input[type="submit"]:hover {
+    background: black;
+}
+
+/* LINK */
+a:link {
+    color: red;
+}
+
+a:hover {
+    color: black;
+}
+
+a:active {
+    color: white;
+}
+
+</style>
+</head>
+
+<body>
+
+<h2>Login</h2>
+
+<form action="index.html" method="get">
+    <label>usuario</label>
+    <input type="text" id="usuario">
+
+    <br><br>
+
+    <label>contraseña</label>
+    <input type="password" name="password">
+
+    <br>
+
+    <input type="submit" value="Ingresar">
+</form>
+
+<br>
+
+<a href="#">¿Olvidaste tu contraseña?</a>
+
+</body>
+</html>

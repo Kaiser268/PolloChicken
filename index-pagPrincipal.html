@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="Sitio web de ejemplo como html puro">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CHICKEN HOUSE</title>
+
+    <!-- Fuente moderna -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+
+    <style>
+        /* =========================
+           Estilo general tipo KFC
+        ========================= */
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            background-color: #f8f8f8;
+        }
+
+        header {
+            background-color: #e4002b;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 40px;
+            letter-spacing: 2px;
+            animation: colorCambio 3s infinite;
+        }
+
+        header p {
+            font-style: italic;
+        }
+
+        @keyframes colorCambio {
+            0% { color: red; }
+            50% { color: orange; }
+            100% { color: red; }
+        }
+
+        /* =========================
+           Menú de navegación
+        ========================= */
+        nav {
+            background-color: black;
+        }
+
+        nav ul {
+            display: flex;
+            justify-content: center;
+            list-style: none;
+            margin: 0;
+            padding: 10px;
+        }
+
+        nav ul li {
+            margin: 0 15px;
+        }
+
+        nav ul li:first-child a {
+            color: yellow; /* primer link */
+        }
+
+        nav ul li:last-child a {
+            color: orange; /* último link */
+        }
+
+        nav a:link {
+            color: white;
+            text-decoration: none;
+        }
+
+        nav a:visited {
+            color: #ccc;
+        }
+
+        nav a:hover {
+            color: yellow;
+            text-decoration: underline;
+        }
+
+        nav a:active {
+            color: #fff200;
+        }
+
+        nav a:focus {
+            background-color: #e4002b;
+            padding: 5px;
+            border-radius: 5px;
+        }
+
+        /* =========================
+           Main y secciones
+        ========================= */
+        main {
+            padding: 20px;
+        }
+
+        h2 {
+            color: #e4002b;
+            border-bottom: 3px solid #e4002b;
+            display: inline-block;
+        }
+
+        section article:first-of-type {
+            background-color: #fff3f3;
+            border-left: 5px solid #e4002b;
+            padding: 10px;
+        }
+
+        section article:last-of-type {
+            background-color: #ffe5e5;
+            border-left: 5px solid #990000;
+            padding: 10px;
+        }
+
+        section article:only-child {
+            background-color: #fff0f0;
+            border-left: 5px solid #e4002b;
+            padding: 15px;
+        }
+
+        /* =========================
+           Imágenes de promociones
+        ========================= */
+        article img {
+            margin: 10px;
+            border-radius: 10px;
+            border: 3px solid #e4002b;
+            transition: transform 0.3s, box-shadow 0.3s;
+            animation: flotar 3s infinite ease-in-out;
+            opacity: 0.9;
+        }
+
+        article img:hover {
+            transform: scale(1.1);
+            box-shadow: 0 0 15px rgba(0,0,0,0.5);
+        }
+
+        article img:active {
+            transform: scale(0.95);
+        }
+
+        article img:only-of-type {
+            border: 5px solid #e4002b;
+            border-radius: 15px;
+        }
+
+        article img:not(:hover) {
+            opacity: 0.9;
+        }
+
+        @keyframes flotar {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-10px); }
+            100% { transform: translateY(0px); }
+        }
+
+        /* =========================
+           Tabla de menú
+        ========================= */
+        table {
+            width: 100%;
+            margin-top: 20px;
+            background-color: white;
+            border-collapse: collapse;
+        }
+
+        th, td {
+            padding: 10px;
+            text-align: center;
+            border: 1px solid black;
+        }
+
+        th {
+            background-color: black;
+            color: white;
+        }
+
+        tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+
+        tr:hover {
+            background-color: #ffe5e5;
+        }
+
+        tr:first-child {
+            background-color: black;
+            color: white;
+        }
+
+        /* =========================
+           Botones
+        ========================= */
+        button {
+            background-color: #e4002b;
+            color: white;
+            border: none;
+            padding: 12px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            border-radius: 5px;
+            transition: transform 0.2s, background-color 0.2s;
+        }
+
+        button:hover {
+            background-color: black;
+        }
+
+        button:active {
+            transform: scale(0.95);
+            background-color: #990000;
+        }
+
+        button:focus {
+            outline: 2px solid black;
+        }
+
+        /* =========================
+           Inputs
+        ========================= */
+        input:focus {
+            outline: none;
+            border: 2px solid #e4002b;
+            background-color: #fff0f0;
+        }
+
+        input:disabled {
+            background-color: #ccc;
+            cursor: not-allowed;
+        }
+
+        input[type="checkbox"]:checked {
+            accent-color: #e4002b;
+        }
+
+        /* =========================
+           Aside y Footer
+        ========================= */
+        aside {
+            background-color: #fff;
+            border-left: 5px solid #e4002b;
+            padding: 10px;
+            margin: 20px;
+        }
+
+        footer {
+            background-color: black;
+            color: white;
+            text-align: center;
+            padding: 15px;
+            margin-top: 20px;
+        }
+
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>CHICKEN HOUSE</h1>
+        <p>"El sabor que te hace volver por mas"</p>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="iniciar sesion.html">Iniciar sesion</a></li>
+            <li><a href="nosotros.html">Nosotros</a></li>
+            <li><a href="delivery.html">delivery</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <section>
+            <h2>Sobre nosotros</h2>
+            <p>Somos una empresa dedicada a la venta de pollo frito crujiente y con un buen sabor, elaborado con ingredientes<br>
+                frescos para ofrecer a nuestros clientes una comida deliciosa a buen precio y con la mejor atención.</p>
+        </section>
+
+        <article>
+            <h2>Promociones</h2>
+            <a href="combo1.html"><img src="combo1.jpeg" width="250" height="235"></a>
+            <a href="combo2.html"><img src="combo2.jpeg" width="250" height="235"></a>
+            <a href="combo3.html"><img src="combo3.jpeg" width="220"></a>
+            <a href="combo4.html"><img src="combo4.jpeg" width="225"></a>
+        </article>
+
+        <section>
+            <h2>Servicios</h2>
+            <article>
+                <h2>Venta de pollo frito</h2>
+                <p>Ofrecemos pollo crujiente, combos familiares y acompañamientos para cualquier ocasión</p>
+            </article>
+
+            <article>
+                <h3>Pedidos y delivery</h3>
+                <p>Atendemos pedidos para llevar y servicio a domicilio para una mejor comodidad</p>
+            </article>
+
+            <table>
+                <tr>
+                    <td colspan="3"><strong>MENÚ DE POLLO FRITO CRUJIENTE</strong></td>
+                </tr>
+                <tr>
+                    <td>Producto/Combo</td>
+                    <td>Descripción del contenido</td>
+                    <td>Precio(S/)</td>
+                </tr>
+                <tr>
+                    <td>ClaCombosico</td>
+                    <td>piezas de pollo+papas familiares+2 gaseosas</td>
+                    <td>S/39.90</td>
+                </tr>
+                <tr>
+                    <td>Combo picante</td>
+                    <td>6 alitas hot+aros de cebolla+2 dips de salsas</td>
+                    <td>S/25.50</td>
+                </tr>
+                <tr>
+                    <td>Mega balde</td>
+                    <td>12 piezas de pollo+ papas familiares+4 gaseosas</td>
+                    <td>S/59.90</td>
+                </tr>
+                <tr>
+                    <td>Duo crujiente</td>
+                    <td>4 piezas de pollo+2 porciones de papas</td>
+                    <td>S/19.90</td>
+                </tr>
+                <tr>
+                    <td>Box personal</td>
+                    <td>2 piezas de pollo+papas+1 gaseosa</td>
+                    <td>S/12.50</td>
+                </tr>
+                <tr>
+                    <td>Balde familiar</td>
+                    <td>15 piezas+2 ensaladas+ papas XXL</td>
+                    <td>S/69.90</td>
+                </tr>
+                <tr>
+                    <td>Combo infantil</td>
+                    <td>1 pieza + papas joven+jugo+juguete</td>
+                    <td>S/14.90</td>
+                </tr>
+                <tr>
+                    <td>Alitas BBQ(12 und)</td>
+                    <td>Bañadas en salsa+ bastones de pan</td>
+                    <td>S/28.50</td>
+                </tr>
+                <tr>
+                    <td>Extra crunch box</td>
+                    <td>4 tenders+ papas+bebida</td>
+                    <td>S/22.00</td>
+                </tr>
+                <tr>
+                    <td>Super combo mix</td>
+                    <td>4 piezas+6 nuggets+ papas+ensalada</td>
+                    <td>S/32.90</td>
+                </tr>
+            </table>
+        </section>
+
+        <h2>Contacto</h2>
+
+        <h3>Haz tu pedido</h3>
+        <label><input type="checkbox"> Quiero papas extra</label><br>
+        <label><input type="checkbox"> Agregar bebida grande</label><br><br>
+        <input type="text" placeholder="Tu nombre"><br><br>
+        <input type="email" placeholder="Tu correo"><br><br>
+        <input type="text" placeholder="No disponible" disabled><br><br>
+        <button>Enviar pedido</button>
+
+    </main>
+
+    <aside>
+        <h3>Noticias</h3>
+        <p>Próximamente nuevos combos y promociones especiales</p>
+    </aside>
+
+    <footer>
+        <p>© 2026 Empresa Ejemplo - Todos los derechos reservados</p>
+    </footer>
+
+</body>
+</html>

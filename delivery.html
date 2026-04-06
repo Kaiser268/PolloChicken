@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>Delivery CHICKEN</title>
+
+<style>
+
+/* ESTILO GENERAL */
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, #000, #a00000);
+    color: white;
+    text-align: center;
+}
+
+/* TÍTULO ANIMADO */
+h1 {
+    animation: tituloAnim 3s infinite alternate;
+}
+
+@keyframes tituloAnim {
+    from { transform: scale(1); color: white; }
+    to { transform: scale(1.1); color: red; }
+}
+
+/* FORMULARIO */
+form {
+    background: white;
+    color: black;
+    padding: 20px;
+    width: 320px;
+    margin: auto;
+    border-radius: 10px;
+}
+
+/* FIRST-CHILD */
+form label:first-child {
+    color: red;
+    font-weight: bold;
+}
+
+/* LAST-CHILD */
+form input:last-child {
+    background: black;
+    color: white;
+    border: none;
+}
+
+/* FIRST-OF-TYPE */
+input:first-of-type {
+    border: 2px solid red;
+}
+
+/* LAST-OF-TYPE */
+input:last-of-type {
+    border: 2px solid black;
+}
+
+/* ONLY-CHILD */
+textarea:only-child {
+    background: #eee;
+}
+
+/* ONLY-OF-TYPE */
+select:only-of-type {
+    border-radius: 10px;
+}
+
+/* INPUTS */
+input, textarea, select {
+    width: 90%;
+    padding: 8px;
+    margin: 5px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    transition: 0.3s;
+}
+
+/* HOVER */
+input:hover, textarea:hover, select:hover {
+    border: 2px solid red;
+}
+
+/* FOCUS */
+input:focus, textarea:focus {
+    background: #ffe5e5;
+    outline: none;
+}
+
+/* ACTIVE */
+input:active {
+    transform: scale(0.95);
+}
+
+/* DISABLED */
+input:disabled {
+    background: gray;
+}
+
+/* CHECKED */
+input:checked {
+    outline: 2px solid red;
+}
+
+/* NOT */
+input:not([type="submit"]) {
+    background: #fafafa;
+}
+
+/* BOTÓN */
+input[type="submit"] {
+    background: red;
+    color: white;
+    cursor: pointer;
+}
+
+/* HOVER BOTÓN */
+input[type="submit"]:hover {
+    background: black;
+}
+
+/* LINKS */
+a:link {
+    color: red;
+}
+
+a:hover {
+    color: black;
+}
+
+a:active {
+    color: white;
+}
+
+/* IMAGEN ANIMADA */
+img {
+    width: 120px;
+    animation: girar 5s linear infinite;
+}
+
+@keyframes girar {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}
+
+</style>
+</head>
+
+<body>
+
+<h1>DELIVERY CHICKEN</h1>
+
+<img src="https://upload.wikimedia.org/wikipedia/en/b/bf/KFC_logo.svg">
+
+<form>
+    <label>DATOS</label>
+    <br><br>
+
+    <label>PERSONA DE CONTACTO</label><br>
+    <input type="text" placeholder="nombre">
+    <input type="text" placeholder="apellido">
+
+    <br><br>
+
+    <label>EMAIL</label><br>
+    <input type="email" placeholder="email">
+
+    <br><br>
+
+    <label>NÚMERO DE TELÉFONO</label><br>
+    <input type="number" placeholder="(000)000-0000">
+
+    <br><br>
+
+    <label>DIRECCIÓN</label><br>
+    <input type="text" placeholder="calle">
+    <input type="text" placeholder="calle 2">
+
+    <label>distrito:</label>
+    <select name="paraSeleccion">
+        <option>chorrillos</option>
+        <option>barranco</option>
+        <option>miraflores</option>
+        <option>surco</option>
+        <option>san borja</option>
+        <option>villa el salvador</option>
+        <option>san juan de miraflores</option>
+        <option>lince</option>
+        <option>comas</option>
+    </select>
+
+    <br><br>
+
+    <input type="text" placeholder="codigo postal">
+
+    <br><br>
+
+    <label>COMENTARIO:</label><br>
+    <textarea rows="7" cols="40"></textarea>
+
+    <br>
+
+    <input type="submit" value="Enviar">
+</form>
+
+<br>
+
+<a href="#">Ir a CHICKEN</a>
+
+</body>
+</html>
