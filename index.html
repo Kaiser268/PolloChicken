@@ -10,7 +10,9 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
 
     <style>
-        
+        /* =========================
+           Estilo general tipo KFC
+        ========================= */
         body {
             font-family: 'Poppins', sans-serif;
             margin: 0;
@@ -24,16 +26,21 @@
             padding: 20px;
         }
 
-        /* TÍTULO MODIFICADO */
         header h1 {
             margin: 0;
-            font-size: 45px;
+            font-size: 40px;
             letter-spacing: 2px;
-            color: white;
+            animation: colorCambio 3s infinite;
         }
 
         header p {
             font-style: italic;
+        }
+
+        @keyframes colorCambio {
+            0% { color: red; }
+            50% { color: orange; }
+            100% { color: red; }
         }
 
         /* =========================
@@ -55,12 +62,21 @@
             margin: 0 15px;
         }
 
-        /* MENÚ MODIFICADO */
-        nav a {
+        nav ul li:first-child a {
+            color: yellow; /* primer link */
+        }
+
+        nav ul li:last-child a {
+            color: orange; /* último link */
+        }
+
+        nav a:link {
             color: white;
             text-decoration: none;
-            font-size: 18px;
-            font-weight: bold;
+        }
+
+        nav a:visited {
+            color: #ccc;
         }
 
         nav a:hover {
@@ -113,8 +129,7 @@
            Imágenes de promociones
         ========================= */
         article img {
-            margin: 10px auto;
-            display: block;
+            margin: 10px;
             border-radius: 10px;
             border: 3px solid #e4002b;
             transition: transform 0.3s, box-shadow 0.3s;
@@ -129,6 +144,15 @@
 
         article img:active {
             transform: scale(0.95);
+        }
+
+        article img:only-of-type {
+            border: 5px solid #e4002b;
+            border-radius: 15px;
+        }
+
+        article img:not(:hover) {
+            opacity: 0.9;
         }
 
         @keyframes flotar {
@@ -247,7 +271,7 @@
         <ul>
             <li><a href="iniciar sesion.html">Iniciar sesion</a></li>
             <li><a href="nosotros.html">Nosotros</a></li>
-            <li><a href="delivery.html">Delivery</a></li>
+            <li><a href="delivery.html">delivery</a></li>
         </ul>
     </nav>
 
@@ -260,10 +284,10 @@
 
         <article>
             <h2>Promociones</h2>
-            <a href="combo1.html"><img src="combo1.jpeg" width="250"></a>
-            <a href="combo2.html"><img src="combo2.jpeg" width="250"></a>
-            <a href="combo3.html"><img src="combo3.jpeg" width="250"></a>
-            <a href="combo4.html"><img src="combo4.jpeg" width="250"></a>
+            <a href="combo1.html"><img src="combo1.jpeg" width="250" height="235"></a>
+            <a href="combo2.html"><img src="combo2.jpeg" width="250" height="235"></a>
+            <a href="combo3.html"><img src="combo3.jpeg" width="220"></a>
+            <a href="combo4.html"><img src="combo4.jpeg" width="225"></a>
         </article>
 
         <section>
@@ -288,9 +312,54 @@
                     <td>Precio(S/)</td>
                 </tr>
                 <tr>
-                    <td>Combo clásico</td>
+                    <td>ClaCombosico</td>
                     <td>piezas de pollo+papas familiares+2 gaseosas</td>
                     <td>S/39.90</td>
+                </tr>
+                <tr>
+                    <td>Combo picante</td>
+                    <td>6 alitas hot+aros de cebolla+2 dips de salsas</td>
+                    <td>S/25.50</td>
+                </tr>
+                <tr>
+                    <td>Mega balde</td>
+                    <td>12 piezas de pollo+ papas familiares+4 gaseosas</td>
+                    <td>S/59.90</td>
+                </tr>
+                <tr>
+                    <td>Duo crujiente</td>
+                    <td>4 piezas de pollo+2 porciones de papas</td>
+                    <td>S/19.90</td>
+                </tr>
+                <tr>
+                    <td>Box personal</td>
+                    <td>2 piezas de pollo+papas+1 gaseosa</td>
+                    <td>S/12.50</td>
+                </tr>
+                <tr>
+                    <td>Balde familiar</td>
+                    <td>15 piezas+2 ensaladas+ papas XXL</td>
+                    <td>S/69.90</td>
+                </tr>
+                <tr>
+                    <td>Combo infantil</td>
+                    <td>1 pieza + papas joven+jugo+juguete</td>
+                    <td>S/14.90</td>
+                </tr>
+                <tr>
+                    <td>Alitas BBQ(12 und)</td>
+                    <td>Bañadas en salsa+ bastones de pan</td>
+                    <td>S/28.50</td>
+                </tr>
+                <tr>
+                    <td>Extra crunch box</td>
+                    <td>4 tenders+ papas+bebida</td>
+                    <td>S/22.00</td>
+                </tr>
+                <tr>
+                    <td>Super combo mix</td>
+                    <td>4 piezas+6 nuggets+ papas+ensalada</td>
+                    <td>S/32.90</td>
                 </tr>
             </table>
         </section>
