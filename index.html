@@ -10,7 +10,6 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
 
     <style>
-       
         body {
             font-family: 'Poppins', sans-serif;
             margin: 0;
@@ -28,22 +27,13 @@
             margin: 0;
             font-size: 40px;
             letter-spacing: 2px;
-            animation: colorCambio 3s infinite;
+            color: white;
         }
 
         header p {
             font-style: italic;
         }
 
-        @keyframes colorCambio {
-            0% { color: red; }
-            50% { color: orange; }
-            100% { color: red; }
-        }
-
-        /* =========================
-           Menú de navegación
-        ========================= */
         nav {
             background-color: black;
         }
@@ -60,30 +50,16 @@
             margin: 0 15px;
         }
 
-        nav ul li:first-child a {
-            color: yellow; /* primer link */
-        }
-
-        nav ul li:last-child a {
-            color: orange; /* último link */
-        }
-
-        nav a:link {
+        nav a {
             color: white;
             text-decoration: none;
+            font-size: 18px; /* tamaño aumentado */
         }
 
-        nav a:visited {
-            color: #ccc;
-        }
-
-        nav a:hover {
-            color: yellow;
-            text-decoration: underline;
-        }
-
+        nav a:visited,
+        nav a:hover,
         nav a:active {
-            color: #fff200;
+            color: white;
         }
 
         nav a:focus {
@@ -92,9 +68,6 @@
             border-radius: 5px;
         }
 
-        /* =========================
-           Main y secciones
-        ========================= */
         main {
             padding: 20px;
         }
@@ -123,11 +96,19 @@
             padding: 15px;
         }
 
-        /* =========================
-           Imágenes de promociones
-        ========================= */
-        article img {
+        /* IMÁGENES FLOTANTES PROMOCIONES */
+        .promociones-img {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            margin-top: 15px;
+        }
+
+        .promociones-img a {
             margin: 10px;
+        }
+
+        .promociones-img img {
             border-radius: 10px;
             border: 3px solid #e4002b;
             transition: transform 0.3s, box-shadow 0.3s;
@@ -135,22 +116,13 @@
             opacity: 0.9;
         }
 
-        article img:hover {
+        .promociones-img img:hover {
             transform: scale(1.1);
             box-shadow: 0 0 15px rgba(0,0,0,0.5);
         }
 
-        article img:active {
+        .promociones-img img:active {
             transform: scale(0.95);
-        }
-
-        article img:only-of-type {
-            border: 5px solid #e4002b;
-            border-radius: 15px;
-        }
-
-        article img:not(:hover) {
-            opacity: 0.9;
         }
 
         @keyframes flotar {
@@ -159,9 +131,6 @@
             100% { transform: translateY(0px); }
         }
 
-        /* =========================
-           Tabla de menú
-        ========================= */
         table {
             width: 100%;
             margin-top: 20px;
@@ -193,9 +162,6 @@
             color: white;
         }
 
-        /* =========================
-           Botones
-        ========================= */
         button {
             background-color: #e4002b;
             color: white;
@@ -220,9 +186,6 @@
             outline: 2px solid black;
         }
 
-        /* =========================
-           Inputs
-        ========================= */
         input:focus {
             outline: none;
             border: 2px solid #e4002b;
@@ -238,9 +201,6 @@
             accent-color: #e4002b;
         }
 
-        /* =========================
-           Aside y Footer
-        ========================= */
         aside {
             background-color: #fff;
             border-left: 5px solid #e4002b;
@@ -252,8 +212,33 @@
             background-color: black;
             color: white;
             text-align: center;
-            padding: 15px;
+            padding: 25px 15px 50px 15px;
             margin-top: 20px;
+        }
+
+        footer a {
+            color: white;
+            text-decoration: none;
+            margin: 0 10px;
+            font-size: 14px;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+
+        .titulo-rojo {
+            color: #e4002b;
+        }
+
+        /* ESTILO CONTACTOS */
+        .contactos a {
+            color: #e4002b;
+            text-decoration: none;
+        }
+
+        .contactos a:hover {
+            text-decoration: underline;
         }
 
     </style>
@@ -267,9 +252,9 @@
 
     <nav>
         <ul>
-            <li><a href="iniciar sesion.html">Iniciar sesion</a></li>
+            <li><a href="iniciar sesion.html">Iniciar sesión</a></li>
             <li><a href="nosotros.html">Nosotros</a></li>
-            <li><a href="delivery.html">delivery</a></li>
+            <li><a href="delivery.html">Delivery</a></li>
         </ul>
     </nav>
 
@@ -280,23 +265,26 @@
                 frescos para ofrecer a nuestros clientes una comida deliciosa a buen precio y con la mejor atención.</p>
         </section>
 
-        <article>
+        <section>
             <h2>Promociones</h2>
-            <a href="combo1.html"><img src="combo1.jpeg" width="250" height="235"></a>
-            <a href="combo2.html"><img src="combo2.jpeg" width="250" height="235"></a>
-            <a href="combo3.html"><img src="combo3.jpeg" width="220"></a>
-            <a href="combo4.html"><img src="combo4.jpeg" width="225"></a>
-        </article>
+            <div class="promociones-img">
+                <a href="combo1.html"><img src="combo1.jpeg" width="250" height="235"></a>
+                <a href="combo2.html"><img src="combo2.jpeg" width="250" height="235"></a>
+                <a href="combo3.html"><img src="combo3.jpeg" width="220"></a>
+                <a href="combo4.html"><img src="combo4.jpeg" width="225"></a>
+            </div>
+        </section>
 
         <section>
             <h2>Servicios</h2>
+
             <article>
                 <h2>Venta de pollo frito</h2>
                 <p>Ofrecemos pollo crujiente, combos familiares y acompañamientos para cualquier ocasión</p>
             </article>
 
             <article>
-                <h3>Pedidos y delivery</h3>
+                <h2 class="titulo-rojo">Pedidos y delivery</h2>
                 <p>Atendemos pedidos para llevar y servicio a domicilio para una mejor comodidad</p>
             </article>
 
@@ -364,12 +352,21 @@
 
         <h2>Contacto</h2>
 
+        <!-- NÚMEROS DE CONTACTO JUSTO DEBAJO DE CONTACTO -->
+        <div class="contactos">
+            <p>Sede San Juan Miraflores: <a href="tel:012345678">01-234-5678</a></p>
+            <p>Sede Villa El Salvador: <a href="tel:019876543">01-987-6543</a></p>
+            <p>Sede Surco: <a href="tel:015551234">01-555-1234</a></p>
+        </div>
+
         <h3>Haz tu pedido</h3>
         <label><input type="checkbox"> Quiero papas extra</label><br>
         <label><input type="checkbox"> Agregar bebida grande</label><br><br>
+
         <input type="text" placeholder="Tu nombre"><br><br>
         <input type="email" placeholder="Tu correo"><br><br>
         <input type="text" placeholder="No disponible" disabled><br><br>
+
         <button>Enviar pedido</button>
 
     </main>
@@ -381,6 +378,12 @@
 
     <footer>
         <p>© 2026 Empresa Ejemplo - Todos los derechos reservados</p>
+        <p>
+            <a href="#">Aviso Legal</a> | 
+            <a href="#">Política de Privacidad</a> | 
+            <a href="#">Trabaja con Nosotros</a> | 
+            <a href="#">Preguntas Frecuentes</a>
+        </p>
     </footer>
 
 </body>
