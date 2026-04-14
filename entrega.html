@@ -1,51 +1,58 @@
-Entrega
-<link rel="stylesheet" href="css/styles.css">
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Entrega</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+
 <body id="mike">
 <div class="entrega-box">
     <h1>ENTREGA</h1>
-    <label>Departamento:</label>
-    <select> 
-        <option value="opcion1">Lima</option>
-        <option value="opcion2">Callao</option>
-    </select>
-    <br><br>
 
-    <label>Provincia</label>
-    <select>
-        <option value="opcion1">Lima</option>
-    </select>
-    <br><br>
+    <form action="pago.html" method="GET">
 
-    <label>Distrito</label>
-    <select>
-        <option value="#">Breña</option>
-        <option value="#">Chorrillos</option>
-        <option value="#">villa el salvador</option>
-        <option value="#">San juan de lurigancho</option>
-        <option value="#">Comas</option>
-        <option value="#">Barranco</option>
-        <option value="#">Miraflores</option>
-        <option value="#">Surco</option>
-        <option value="#">San borja</option>
-        <option value="#">La victoria</option>
-        <option value="#">La molina</option>
-        <option value="#">Carabayllo</option>
-        <option value="#">Magdalena del mar</option>
-        <option value="#">San isidro</option>
-    </select>
-    <br><br>
+        <label>Departamento:</label>
+        <select name="departamento"> 
+            <option value="lima">Lima</option>
+            <option value="callao">Callao</option>
+        </select>
+        <br><br>
 
-    <input type="text" placeholder="Direccion*">
-    <br><br>
+        <label>Provincia:</label>
+        <select name="provincia">
+            <option value="lima">Lima</option>
+        </select>
+        <br><br>
 
-    <textarea placeholder="Referencia" rows="7" cols="40"></textarea>
-    <br><br>
+        <label>Distrito:</label>
+        <select name="distrito">
+            <option value="brena">Breña</option>
+            <option value="chorrillos">Chorrillos</option>
+            <option value="ves">Villa El Salvador</option>
+            <option value="sjl">San Juan de Lurigancho</option>
+            <option value="comas">Comas</option>
+            <option value="barranco">Barranco</option>
+            <option value="miraflores">Miraflores</option>
+            <option value="surco">Surco</option>
+            <option value="sanborja">San Borja</option>
+            <option value="lavictoria">La Victoria</option>
+            <option value="lamolina">La Molina</option>
+            <option value="carabayllo">Carabayllo</option>
+            <option value="magdalena">Magdalena del Mar</option>
+            <option value="sanisidro">San Isidro</option>
+        </select>
+        <br><br>
 
-    <a href="pago.html"><button>siguiente</button></a>
+        <input type="text" name="direccion" placeholder="Dirección*" required>
+        <br><br>
+
+        <textarea name="referencia" placeholder="Referencia"></textarea>
+        <br><br>
+
+        <button type="submit">Siguiente</button>
+
+    </form>
 </div>
 </body>
-<input type="text" placeholder="Direccion*">
-<br><br>
-<textarea placeholder="Referencia" rows="7" cols="40"></textarea>
-<br><br>
-<a href="pago.html"><button>siguiente</button></a>
+</html>
