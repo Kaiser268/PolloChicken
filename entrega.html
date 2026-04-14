@@ -2,13 +2,83 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <title>Entrega</title>
-    <link rel="stylesheet" href="css/styles.css">
+    <title>Entrega - Pollo Frito</title>
+
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background: linear-gradient(135deg, #b30000, #ff1a1a);
+        }
+
+        /* Caja principal */
+        .entrega-box {
+            width: 360px;
+            margin: 60px auto;
+            padding: 25px;
+            background: #ffffff;
+            border-radius: 15px;
+            box-shadow: 0px 8px 25px rgba(0,0,0,0.4);
+            text-align: center;
+        }
+
+        /* Título */
+        h1 {
+            color: #b30000;
+            margin-bottom: 15px;
+        }
+
+        /* Labels */
+        label {
+            display: block;
+            text-align: left;
+            margin-top: 12px;
+            font-weight: bold;
+        }
+
+        /* Inputs */
+        select, input, textarea {
+            width: 100%;
+            padding: 10px;
+            margin-top: 5px;
+            border-radius: 8px;
+            border: 1px solid #ccc;
+            box-sizing: border-box;
+            font-size: 14px;
+        }
+
+        textarea {
+            resize: none;
+        }
+
+        /* Botón */
+        button {
+            width: 100%;
+            padding: 12px;
+            margin-top: 18px;
+            background: #ff1a1a;
+            color: white;
+            border: none;
+            border-radius: 10px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: 0.3s;
+            font-weight: bold;
+        }
+
+        button:hover {
+            background: #cc0000;
+            transform: scale(1.05);
+        }
+    </style>
 </head>
 
-<body id="mike">
+<body>
+
 <div class="entrega-box">
-    <h1>ENTREGA</h1>
+
+    <h1>🍗 ENTREGA</h1>
 
     <form action="pago.html" method="GET">
 
@@ -17,13 +87,11 @@
             <option value="lima">Lima</option>
             <option value="callao">Callao</option>
         </select>
-        <br><br>
 
         <label>Provincia:</label>
         <select name="provincia">
             <option value="lima">Lima</option>
         </select>
-        <br><br>
 
         <label>Distrito:</label>
         <select name="distrito">
@@ -42,17 +110,18 @@
             <option value="magdalena">Magdalena del Mar</option>
             <option value="sanisidro">San Isidro</option>
         </select>
-        <br><br>
 
+        <label>Dirección:</label>
         <input type="text" name="direccion" placeholder="Dirección*" required>
-        <br><br>
 
-        <textarea name="referencia" placeholder="Referencia"></textarea>
-        <br><br>
+        <label>Referencia:</label>
+        <textarea name="referencia" rows="4" placeholder="Ej: Casa azul, portón negro"></textarea>
 
         <button type="submit">Siguiente</button>
 
     </form>
+
 </div>
+
 </body>
 </html>
