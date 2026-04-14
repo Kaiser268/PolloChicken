@@ -1,8 +1,85 @@
-<article>
-    <video width="320" height="240"controls>
-        <source src="chmo.mp4" type="video/mp4">
-    </video><br>
-    <audio controls>
-        <source src="pollo.mp3" type="audio/mp3"> 
-    </audio>
-</article>
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Pollo Frito Crujiente</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #fff5f5;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #c40000;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+
+        header h1 {
+            margin: 0;
+        }
+
+        .presentacion {
+            padding: 20px;
+            text-align: center;
+            color: #333;
+        }
+
+        .contenedor {
+            text-align: center;
+            margin: 20px;
+            padding: 20px;
+            border: 2px solid #c40000;
+            border-radius: 10px;
+            background-color: #fff;
+        }
+
+        video, audio {
+            margin-top: 15px;
+            border-radius: 10px;
+        }
+
+        footer {
+            background-color: #c40000;
+            color: white;
+            text-align: center;
+            padding: 10px;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Pollo Frito Crujiente</h1>
+    </header>
+
+    <section class="presentacion">
+        <p>
+            Somos una empresa dedicada a la venta de pollo frito crujiente y con un buen sabor,
+            elaborado con ingredientes frescos para ofrecer a nuestros clientes una comida deliciosa
+            a buen precio y con la mejor atención.
+        </p>
+    </section>
+
+    <article class="contenedor">
+        <h2>Conoce nuestro producto</h2>
+
+        <video width="320" height="240" controls>
+            <source src="chmo.mp4" type="video/mp4">
+        </video><br>
+
+        <audio controls>
+            <source src="pollo.mp3" type="audio/mp3"> 
+        </audio>
+    </article>
+
+    <footer>
+        <p>© 2026 Pollo Frito Crujiente - Todos los derechos reservados</p>
+    </footer>
+
+</body>
+</html>
