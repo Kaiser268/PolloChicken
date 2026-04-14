@@ -1,17 +1,145 @@
-<h2>Mega balde</h2>
-<img src="combo3.jpeg" width="350"><br>
-<label>Eliga su complemento</label><br>
-<input type="radio">papas familiares <br>
-<input type="radio">papa super familiar +S/7.50 <br>
-<input type="radio">ensalada  familiar
-<br>
-<br>
-<label>Agranda tu promo:</label><br>
-<input type="radio">2 piezas de pollo cripy +S/8.00<br>
-<input type="radio">Nuggets (6 un) +S/10.90<br>
-<input type="radio">3 pie de manzana +S/14.90<br>
-<input type="radio">3 pie dulce de leche +S/14.90<br>
-<input type="radio">Inca kola zero azúcar 1.5L +S/7.90<br>
-<input type="radio">Coca cola zero azúcar 1.5L +7.90
-<br><br>
-<button>Agregar (S/19.90)</button> 
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>Mega Balde</title>
+
+<style>
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+
+    
+    background: linear-gradient(135deg, #ff2a2a, #b30000);
+
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+
+body::before, body::after {
+    content: "";
+    position: absolute;
+    border-radius: 50%;
+    z-index: 0;
+}
+
+body::before {
+    width: 300px;
+    height: 300px;
+    background: rgba(255,255,255,0.1);
+    top: 50px;
+    left: 50px;
+}
+
+body::after {
+    width: 200px;
+    height: 200px;
+    background: rgba(255,255,255,0.15);
+    bottom: 50px;
+    right: 50px;
+}
+
+
+.card {
+    width: 380px;
+    background: white;
+    border-radius: 15px;
+    box-shadow: 0px 8px 20px rgba(0,0,0,0.2);
+    overflow: hidden;
+    position: relative;
+    z-index: 1;
+}
+
+.header {
+    background: #d60000;
+    color: white;
+    text-align: center;
+    padding: 15px;
+    font-size: 22px;
+    font-weight: bold;
+}
+
+.card img {
+    width: 100%;
+    display: block;
+}
+
+.content {
+    padding: 20px;
+}
+
+.section-title {
+    color: #d60000;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+.option {
+    display: block;
+    margin: 8px 0;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.option input {
+    margin-right: 8px;
+}
+
+button {
+    width: 100%;
+    background: #d60000;
+    color: white;
+    border: none;
+    padding: 12px;
+    font-size: 16px;
+    border-radius: 10px;
+    margin-top: 15px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+button:hover {
+    background: #a80000;
+}
+</style>
+</head>
+
+<body>
+
+<div class="card">
+
+    <div class="header">🍗 Mega balde</div>
+
+    <img src="combo3.jpeg">
+
+    <div class="content">
+
+        <div class="section-title">Elige tu complemento</div>
+
+        <label class="option"><input type="radio" name="combo"> Papas familiares</label>
+        <label class="option"><input type="radio" name="combo"> Papa super familiar +S/7.50</label>
+        <label class="option"><input type="radio" name="combo"> Ensalada familiar</label>
+
+        <div class="section-title">Agranda tu promo</div>
+
+        <label class="option"><input type="radio"> 2 piezas de pollo crispy +S/8.00</label>
+        <label class="option"><input type="radio"> Nuggets (6 un) +S/10.90</label>
+        <label class="option"><input type="radio"> 3 pie de manzana +S/14.90</label>
+        <label class="option"><input type="radio"> 3 pie dulce de leche +S/14.90</label>
+        <label class="option"><input type="radio"> Inca Kola Zero 1.5L +S/7.90</label>
+        <label class="option"><input type="radio"> Coca Cola Zero 1.5L +S/7.90</label>
+
+        <a href="datos.html">
+            <button>Agregar (S/25.50)</button>
+        </a>
+
+    </div>
+
+</div>
+
+</body>
+</html>
