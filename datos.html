@@ -1,25 +1,124 @@
-<link rel="stylesheet" href="CSS/styles.css">
- <body id="pool">
- <div id="form-datos">
-  <h1>DATOS PERSONALES</h1>
-  
-  <label>EMAIL:</label>
-  <input type="email" placeholder="email">
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Datos Personales</title>
 
-  <input type="text" placeholder="Nombre">
-  <input type="text" placeholder="Apellido">
+    <style>
+        body#pool {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background: linear-gradient(135deg, #b30000, #ff1a1a);
+        }
 
-  <div class="fila">
-    <select>
-      <option>DNI</option>
-      <option>Pasaporte</option>
-      <option>Carnet</option>
-    </select>
-    <input type="number" placeholder="Número de documento">
-  </div>
+        /* Caja principal */
+        #form-datos {
+            width: 360px;
+            margin: 60px auto;
+            padding: 25px;
+            background: #ffffff;
+            border-radius: 15px;
+            box-shadow: 0px 8px 25px rgba(0,0,0,0.4);
+            text-align: center;
+        }
 
-  <input type="number" placeholder="Número de teléfono">
+        /* Título */
+        h1 {
+            color: #b30000;
+            margin-bottom: 20px;
+        }
 
-  <a href="entrega.html"><button>Siguiente</button></a>
+        /* Labels */
+        label {
+            display: block;
+            text-align: left;
+            margin-top: 10px;
+            font-weight: bold;
+        }
+
+        /* Inputs */
+        input, select {
+            width: 100%;
+            padding: 10px;
+            margin-top: 8px;
+            border-radius: 8px;
+            border: 1px solid #ccc;
+            box-sizing: border-box;
+            font-size: 14px;
+        }
+
+        /* Fila para DNI */
+        .fila {
+            display: flex;
+            gap: 10px;
+        }
+
+        .fila select {
+            width: 40%;
+        }
+
+        .fila input {
+            width: 60%;
+        }
+
+        /* Botón */
+        button {
+            width: 100%;
+            padding: 12px;
+            margin-top: 18px;
+            background: #ff1a1a;
+            color: white;
+            border: none;
+            border-radius: 10px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: 0.3s;
+            font-weight: bold;
+        }
+
+        button:hover {
+            background: #cc0000;
+            transform: scale(1.05);
+        }
+    </style>
+</head>
+
+<body id="pool">
+
+<div id="form-datos">
+
+    <h1>🍗 DATOS PERSONALES</h1>
+
+    <form action="entrega.html" method="GET">
+
+        <label>Email:</label>
+        <input type="email" name="email" placeholder="Correo electrónico" required>
+
+        <label>Nombre:</label>
+        <input type="text" name="nombre" placeholder="Nombre" required>
+
+        <label>Apellido:</label>
+        <input type="text" name="apellido" placeholder="Apellido" required>
+
+        <div class="fila">
+            <select name="tipo_doc">
+                <option value="dni">DNI</option>
+                <option value="pasaporte">Pasaporte</option>
+                <option value="carnet">Carnet</option>
+            </select>
+
+            <input type="number" name="numero_doc" placeholder="N° Documento" required>
+        </div>
+
+        <label>Teléfono:</label>
+        <input type="number" name="telefono" placeholder="Número de teléfono" required>
+
+        <button type="submit">Siguiente</button>
+
+    </form>
+
 </div>
- </body>
+
+</body>
+</html>
