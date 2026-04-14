@@ -42,6 +42,39 @@
             border-radius: 10px;
         }
 
+        /* NUEVA SECCIÓN STAFF */
+        .staff {
+            text-align: center;
+            margin: 20px;
+            padding: 20px;
+            background-color: #fff;
+            border-top: 5px solid #c40000;
+        }
+
+        .staff h2 {
+            color: #c40000;
+        }
+
+        .miembros {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        .persona {
+            background-color: #ffe5e5;
+            padding: 15px;
+            border-radius: 10px;
+            width: 200px;
+            border: 2px solid #c40000;
+        }
+
+        .persona h3 {
+            margin: 10px 0 5px 0;
+            color: #c40000;
+        }
+
         footer {
             background-color: #c40000;
             color: white;
@@ -76,6 +109,27 @@
             <source src="pollo.mp3" type="audio/mp3"> 
         </audio>
     </article>
+
+    <!-- SECCIÓN STAFF -->
+    <section class="staff">
+        <h2>Nuestro Staff</h2>
+        <div class="miembros">
+            <div class="persona">
+                <h3>Roberto Paye</h3>
+                <p>Gerente General</p>
+            </div>
+
+            <div class="persona">
+                <h3>Marcelo Masias</h3>
+                <p>Jefe de Cocina</p>
+            </div>
+
+            <div class="persona">
+                <h3>Nicol Fuentes</h3>
+                <p>Atención al Cliente</p>
+            </div>
+        </div>
+    </section>
 
     <footer>
         <p>© 2026 Pollo Frito Crujiente - Todos los derechos reservados</p>
